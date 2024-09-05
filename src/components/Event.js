@@ -9,10 +9,10 @@ const Event = ({ event }) => {
       <div className="eventSummary">
         <h2>{event.summary}</h2>
         <p>{event.location}</p>
-        <p></p>
+        <p>{event.created}</p>
       </div>
       {showDetails ? (
-        <div className="details">
+        <div className="eventDetails">
           <p>{event.description}</p>
         </div>
       ) : null}
