@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event';
 
 describe('<NumberOfEvents /> Component', () => {
     let NumberOfEventsComponent;
-    
     beforeEach(() => {
         NumberOfEventsComponent = render(
             <NumberOfEvents 
