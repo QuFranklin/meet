@@ -28,7 +28,7 @@ describe('<NumberOfEvents /> Component', () => {
         const input = NumberOfEventsComponent.getByTestId('numberOfEventsInput');
         const user = userEvent.setup();
         await user.type(input, '{backspace}{backspace}10');
-        NumberOfEventsComponent.rerender(<NumberOfEvents />);
         expect(input).toHaveValue('10');
     });
 });
+
