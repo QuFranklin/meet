@@ -7,6 +7,7 @@ import App from '../App';
 
 describe('<App /> component', () => {
     let AppDOM;
+    
     beforeEach(() => {
       AppDOM = render(<App />).container.firstChild;
     });
@@ -25,6 +26,7 @@ describe('<App /> component', () => {
 });
 
 describe('<App /> integration', () => {
+  
   test('renders a list of events matching the city selected by the user', async () => {
     const user = userEvent.setup();
     const AppComponent = render(<App />);
@@ -42,10 +44,12 @@ describe('<App /> integration', () => {
 
     const allEvents = await getEvents();
     const berlinEvents = allEvents.filter(event => event.location === 'Berlin, Germany');
-
     expect(allRenderedEventItems.length).toBe(berlinEvents.length);
+    
     allRenderedEventItems.forEach(event => {
       expect(event.textContent).toContain("Berlin, Germany");
     });
   });
-})
+    
+ 
+});
